@@ -3,7 +3,8 @@
   (:require
    [ring.adapter.jetty :as jetty]
    [clostache.parser :as clostache]
-   [compojure.route :as route]))
+   [compojure.route :as route])
+  (:gen-class :main true))
 
 (defroutes main-routes
   (GET "/" [] "Welcome world")
@@ -12,5 +13,5 @@
 (defn -main []
   (let [port
         (Integer/parseInt
-         (get (System/getenv) "PORT" "80"))]
+         (get (System/getenv) "PORT" "8080"))]
     (jetty/run-jetty main-routes {:port port})))

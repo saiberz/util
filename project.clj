@@ -7,4 +7,5 @@
                  [ring "1.3.1"]
                  [compojure "1.2.1"]
                  [de.ubercode.clostache/clostache "1.4.0"]]
-  :main clojuredep.core)
+  :main ^:skip-aot clojuredep.core
+  :profiles {:uberjar {:aot :all}})
