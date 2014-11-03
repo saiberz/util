@@ -12,5 +12,5 @@
 (defn -main []
   (let [port
         (Integer/parseInt
-         (get (System/getenv) "PORT" "8080"))]
+         (get (System/getenv) "PORT" "80"))]
     (jetty/run-jetty main-routes {:port port})))
